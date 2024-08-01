@@ -26,6 +26,9 @@ SECRET_KEY = 'django-insecure-#4)62by#m6qdoexigkcj$m3b##_c&=g*tq=(-@e=q&%royg#0r
 DEBUG = True
 
 ALLOWED_HOSTS = []
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # Add your frontend URL here
+]
 
 
 # Application definition
@@ -37,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+    'corsheaders',  # For handling CORS
+    'app',  # Your app
 ]
 
 MIDDLEWARE = [
@@ -47,6 +54,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',  # For handling CORS
+
 ]
 
 ROOT_URLCONF = 'backend.urls'
