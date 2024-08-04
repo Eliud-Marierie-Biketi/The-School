@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 210 50% 90%; /* Lighter background */
+    --foreground: 200 20% 10%; /* Darker foreground */
+ 
+    --muted: 200 30% 85%; /* Lighter muted color */
+    --muted-foreground: 200 20% 40%; /* Darker muted foreground */
+ 
+    --popover: 210 50% 95%; /* Very light popover background */
+    --popover-foreground: 200 20% 10%; /* Darker popover foreground */
+ 
+    --card: 210 50% 95%; /* Very light card background */
+    --card-foreground: 200 20% 10%; /* Darker card foreground */
+ 
+    --border: 210 30% 80%; /* Light border color */
+    --input: 210 30% 80%; /* Light input color */
+ 
+    --primary: 200 20% 30%; /* Darker primary color */
+    --primary-foreground: 200 30% 95%; /* Very light primary foreground */
+ 
+    --secondary: 200 30% 85%; /* Lighter secondary color */
+    --secondary-foreground: 200 20% 30%; /* Darker secondary foreground */
+ 
+    --accent: 200 30% 85%; /* Lighter accent color */
+    --accent-foreground: 200 20% 30%; /* Darker accent foreground */
+ 
+    --destructive: 0 70% 60%; /* Bright red for destructive actions */
+    --destructive-foreground: 200 30% 95%; /* Very light destructive foreground */
+ 
+    --ring: 200 20% 20%; /* Dark ring color */
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 200 20% 10%; /* Darker background for dark mode */
+    --foreground: 200 30% 90%; /* Lighter foreground for dark mode */
+ 
+    --muted: 200 20% 20%; /* Darker muted color for dark mode */
+    --muted-foreground: 200 40% 70%; /* Lighter muted foreground for dark mode */
+ 
+    --popover: 200 20% 10%; /* Darker popover background for dark mode */
+    --popover-foreground: 200 30% 90%; /* Lighter popover foreground for dark mode */
+ 
+    --card: 200 20% 10%; /* Darker card background for dark mode */
+    --card-foreground: 200 30% 90%; /* Lighter card foreground for dark mode */
+ 
+    --border: 200 20% 20%; /* Darker border color for dark mode */
+    --input: 200 20% 20%; /* Darker input color for dark mode */
+ 
+    --primary: 200 30% 90%; /* Lighter primary color for dark mode */
+    --primary-foreground: 200 20% 10%; /* Darker primary foreground for dark mode */
+ 
+    --secondary: 200 20% 20%; /* Darker secondary color for dark mode */
+    --secondary-foreground: 200 30% 90%; /* Lighter secondary foreground for dark mode */
+ 
+    --accent: 200 20% 20%; /* Darker accent color for dark mode */
+    --accent-foreground: 200 30% 90%; /* Lighter accent foreground for dark mode */
+ 
+    --destructive: 0 60% 50%; /* Slightly less bright red for dark mode */
+    --destructive-foreground: 200 30% 90%; /* Lighter destructive foreground for dark mode */
+ 
+    --ring: 200 30% 80%; /* Light ring color for dark mode */
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

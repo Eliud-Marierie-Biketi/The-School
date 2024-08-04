@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.http import JsonResponse
+from django.views import View
 
-# Create your views here.
+class ItemListView(View):
+    def get(self, request):
+        data = {'items': ['item1', 'item2', 'item3']}  # Example data
+        return JsonResponse(data)
